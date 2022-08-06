@@ -1,8 +1,9 @@
 import React from "react";
 import Paper from "@mui/material/Paper";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const data = [
   {
@@ -42,41 +43,43 @@ const data = [
     cost: "Starting 22599 INR",
   },
 ];
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 767 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 767, min: 0 },
-    items: 1,
-  },
+var settings = {
+  dots: false,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1,
+        arrow: false,
+        button: false,
+        dots:true
+      }
+    },
+  ]
 };
+
 
 export default function SliderSection({title,id}) {
   return (
-    <div className="px-20 py-10" id={id}>
-      <h6 className="text-left mx-20">{title}</h6>
-      <Carousel
-        responsive={responsive}
-        className="trips-slider-container my-10"
-        animation={"slide"}
-        swipe={true}
-        itemClass="trip-data-card"
-        autoPlaySpeed={3000}
-        autoPlay={false}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        renderButtonGroupOutside={true} 
-      >
+    <div className="section slider" id={id}>
+      <h6 className="slider-title">{title}</h6>
+      <Slider {...settings}>
         {data.map((dataItem) => (
           <Paper className="trip-data-card-inner" elevation={2}>
             <div className="trip-data-card-inner-content">
@@ -85,10 +88,9 @@ export default function SliderSection({title,id}) {
             <p className="text-xl duration">{dataItem.duration}</p>
             <p className="text-xl date">{dataItem.cost}</p>
             </div>
-            
           </Paper>
         ))}
-      </Carousel>
+     </Slider>
       <Link to="/">
         <p className="text-center">See More</p>
       </Link>

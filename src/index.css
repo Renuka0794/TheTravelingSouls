@@ -131,6 +131,10 @@ z-index: 100;
   background-image: url('./assets/banner3.jpg');
   
 }
+
+.section{
+  margin:20px 100px 25px;
+}
 .trip-data-card{
   margin: 0 10px;
   height: 400px;
@@ -142,6 +146,7 @@ z-index: 100;
   background-position: center;
   background-repeat: no-repeat;
   height: 400px;
+  position: relative;
 }
 .trip-data-card-inner-content{
     position: absolute;
@@ -176,7 +181,13 @@ padding-bottom: 4px;;
 .about{
   padding: 40px 10%;
 }
-
+/* Slider section */
+.slider-title{
+text-align: left;
+}
+.slick-slide {
+  padding:0 5px;
+}
 @media only screen and (max-width:767px) {
   
   .icon-md{
@@ -189,6 +200,13 @@ padding-bottom: 4px;;
   }
   .about{
     padding: 20px 5%;
+  }
+  /* Slider section */
+  .slider-title{
+    text-align: center;
+  }
+  .section{
+    margin:20px 30px 15px;
   }
 
 }
