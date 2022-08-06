@@ -1,5 +1,4 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";

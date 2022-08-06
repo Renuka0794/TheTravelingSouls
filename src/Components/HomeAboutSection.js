@@ -1,11 +1,5 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import { Grid, SvgIco, Icon } from "@mui/material";
-import { Link } from "react-router-dom";
-
-
+import { Grid,Icon } from "@mui/material";
 import "react-awesome-slider/dist/styles.css";
 import PrayerFlag  from "../assets/icons/prayerFlag.svg";
 import Ladakh  from "../assets/icons/ladakh.svg";

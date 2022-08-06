@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import HeroSection from "../Components/HeroSection";
 import HomeAboutSection from "../Components/HomeAboutSection";
 import Background1 from "../assets/banner1.jpg"

@@ -60,11 +60,6 @@ z-index: 100;
 }
 .icon-contents{
   display: contents !important;
-  /* display: flex !important; */
-
-}
-.icon-contents img{
-
 }
 .bg-white p{
   color: black;
@@ -147,10 +142,8 @@ z-index: 100;
   width:320px;
 }
 .parallax {
-
   /* Set a specific height */
   min-height: 500px;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
