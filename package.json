@@ -1,7 +1,7 @@
 {
   "name": "the-traveling-souls",
   "version": "0.1.0",
-  "homepage": "https://Renuka0794.github.io/TheTravelingSouls",
+  "homepage": ".",
   "proxy": "http://localhost:5000",
   "private": false,
   "dependencies": {
