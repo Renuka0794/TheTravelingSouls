@@ -5,7 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from "react-router-dom";
 
-const tripsData = [
+const data = [
   {
     title: "Jibhi - Tirthan",
     date: "17th June",
@@ -63,17 +63,17 @@ const responsive = {
   },
 };
 
-export default function UpcomingTripsSection() {
+export default function SliderSection({title,id}) {
   return (
-    <div className="px-20 py-10">
-      <h6 className="text-left mx-20">Upcoming Trips</h6>
+    <div className="px-20 py-10" id={id}>
+      <h6 className="text-left mx-20">{title}</h6>
       <Carousel
         responsive={responsive}
         className="trips-slider-container mx-20 my-5"
         animation={"slide"}
         swipe={true}
       >
-        {tripsData.map((dataItem) => (
+        {data.map((dataItem) => (
           <Paper className="trip-data-card">
             <p>{dataItem.title}</p>
             <p>{dataItem.price}</p>
