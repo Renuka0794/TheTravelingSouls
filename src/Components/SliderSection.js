@@ -53,11 +53,11 @@ const responsive = {
     items: 3,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1024, min: 767 },
     items: 2,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 767, min: 0 },
     items: 1,
   },
 };
@@ -68,16 +68,24 @@ export default function SliderSection({title,id}) {
       <h6 className="text-left mx-20">{title}</h6>
       <Carousel
         responsive={responsive}
-        className="trips-slider-container mx-20 my-5"
+        className="trips-slider-container my-10"
         animation={"slide"}
         swipe={true}
+        itemClass="trip-data-card"
+        autoPlaySpeed={3000}
+        autoPlay={false}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        renderButtonGroupOutside={true} 
       >
         {data.map((dataItem) => (
-          <Paper className="trip-data-card">
-            <p>{dataItem.title}</p>
-            <p>{dataItem.price}</p>
-            <p>{dataItem.duration}</p>
-            <p>{dataItem.cost}</p>
+          <Paper className="trip-data-card-inner" elevation={2}>
+            <div className="trip-data-card-inner-content">
+            <p className="text-xl title">{dataItem.title}</p>
+            <p className="text-xl price">{dataItem.price}</p>
+            <p className="text-xl duration">{dataItem.duration}</p>
+            <p className="text-xl date">{dataItem.cost}</p>
+            </div>
+            
           </Paper>
         ))}
       </Carousel>
