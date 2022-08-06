@@ -1,5 +1,5 @@
 import React from "react";
-import {Grid, ImageList,ImageListItem,ImageListItemBar} from '@mui/material';
+import {Grid, ImageList,ImageListItem} from '@mui/material';
 import gallery from "../data/images";
 export default function Gallery() {
   const itemData = gallery();
@@ -21,7 +21,6 @@ export default function Gallery() {
                   alt={item.title}
                   loading="lazy"
                 />
-                  {/* <ImageListItemBar position="below" title={item.title} /> */}
               </ImageListItem>
           ))}
         </ImageList>
