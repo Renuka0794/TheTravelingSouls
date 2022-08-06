@@ -43,7 +43,7 @@ export default function HomeAboutSection() {
           </Grid>
           <Grid item md={2}>
             <Icon  className="icon icon-md icon-contents">
-            <img src={PrayerFlag}/>
+            <img src={PrayerFlag} alt="flag icon"/>
             </Icon>
             <p className="text-xl">Spiti Tours</p>
           </Grid>
