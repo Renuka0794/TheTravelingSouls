@@ -6,14 +6,15 @@ import CubeAnimation from "react-awesome-slider/dist/custom-animations/cube-anim
 
 // scaleOutAnimation fallAnimation cubeAnimation openAnimation foldOutAnimation
 
-export default function HeroSection({withSlider, data}) {
+export default function HeroSection({withSlider, data,height='100vh'}) {
 
     if (!withSlider) {
         return (
             <div
                 className="w-full hero-section-inner flex justify-center items-center content-center parallax"
                 style={{
-                backgroundImage: `url(${data[0].imglink})`
+                    backgroundImage: `url(${data[0].imglink})`,
+                    height
             }}>
                 <div className="h-auto max-h-[50%] ">
                     <h3>{data[0].title}</h3>

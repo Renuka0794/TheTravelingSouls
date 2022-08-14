@@ -24,7 +24,9 @@ z-index: 100;
 
 
 /* common css */
-
+.black-icon{
+  color:#000;
+}
 .icon-xs{
   height:20px !important;
   width:20px !important;
@@ -64,12 +66,32 @@ z-index: 100;
 .bg-white p{
   color: black;
 }
+.text-lg-left-sm-center{
+ text-align: left;
+}
+.parallax {
+  /* Set a specific height */
+  min-height: 500px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section{
+  margin:20px 100px 25px;
+}
+.block-heading{
+  text-align: left;
+}
+.block-content{
+  text-align: left;
+}
+/* Common Css end */
 
+/* Container Specific Css Starts */
 
-
-/* common css */
-
-/* container specific css */
+/* Header Section */
 .header-inner-image{
   background-image: url('./assets/banner1.jpg');
   height: 100vh;
@@ -91,7 +113,6 @@ z-index: 100;
   height: 100px;
   width: 50%;
 }
-
 .header-links{
   font-size:20px;
   text-transform: uppercase;
@@ -99,16 +120,10 @@ z-index: 100;
 .logo-image{
   width:70px;
 }
+/* Header Section Ends */
 
-.banner,.hero-section-inner{
-  height:100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.home-banner-slider,.home-banner-slider .awssld__content{
-  height: 100vh;
-}
+
+/* Hero Section Starts */
 .hero-section-slider,.hero-section-slider .awssld__content{
   height: 100vh;
 }
@@ -118,23 +133,10 @@ z-index: 100;
   background-position: center;
   background-repeat: no-repeat;
 }
+/* Hero Section Ends */
 
-.home-banner{
-  background-image: url('./assets/banner1.jpg');
+/*  Slider Section starts */
 
-}
-.home-banner-1{
-  background-image: url('./assets/banner2.jpg');
-  
-}
-.home-banner-2{
-  background-image: url('./assets/banner3.jpg');
-  
-}
-
-.section{
-  margin:20px 100px 25px;
-}
 .trip-data-card{
   margin: 0 10px;
   height: 400px;
@@ -149,47 +151,52 @@ z-index: 100;
   position: relative;
 }
 .trip-data-card-inner-content{
-    position: absolute;
-    background: #bfc2cb69 !important;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  background: #bfc2cb69 !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .trip-data-card-inner p{
- color: white;
-padding-bottom: 4px;;
+  color: white;
+  padding-bottom: 4px;;
 }
-.parallax {
-  /* Set a specific height */
-  min-height: 500px;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.footer{
-
-}
-.about{
-  padding: 40px 10%;
-}
-/* Slider section */
 .slider-title{
-text-align: left;
+  text-align: left;
 }
 .slick-slide {
   padding:0 5px;
 }
+/*  Slider Section end */
+
+
+/* About Section Starts */
+.about{
+  padding: 40px 10%;
+}
+/* About Section Ends */
+
+/* Stepper */
+.MuiStepLabel-label{
+color:#fff;
+font-size: 20px;
+
+}
+.block .css-qivjh0-MuiStepLabel-label.Mui-completed{
+  color:#fff;
+  font-size: 20px;
+}
+.block .css-qivjh0-MuiStepLabel-label.Mui-active{
+  color:#fff;
+  font-size: 24px;
+}
 @media only screen and (max-width:767px) {
-  
   .icon-md{
     height: 35px !important;
     width:35px !important;
@@ -198,15 +205,23 @@ text-align: left;
     height:40px !important;
     width:40px !important;
   }
-  .about{
-    padding: 20px 5%;
+  .text-lg-left-sm-center{
+    text-align: center;
+   }
+  .section{
+    margin:20px 30px 15px;
   }
-  /* Slider section */
+  .block-heading{
+    text-align: center;
+  }
+  .block-content{
+    text-align: center;
+  }
   .slider-title{
     text-align: center;
   }
-  .section{
-    margin:20px 30px 15px;
+  .about{
+    padding: 20px 5%;
   }
 
 }

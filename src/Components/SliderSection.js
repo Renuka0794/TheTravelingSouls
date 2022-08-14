@@ -81,6 +81,8 @@ export default function SliderSection({title,id}) {
       <h6 className="slider-title">{title}</h6>
       <Slider {...settings}>
         {data.map((dataItem) => (
+          <Link to="/package">
+         
           <Paper className="trip-data-card-inner" elevation={2}>
             <div className="trip-data-card-inner-content">
             <p className="text-xl title">{dataItem.title}</p>
@@ -89,6 +91,7 @@ export default function SliderSection({title,id}) {
             <p className="text-xl date">{dataItem.cost}</p>
             </div>
           </Paper>
+          </Link>
         ))}
      </Slider>
       <Link to="/">
