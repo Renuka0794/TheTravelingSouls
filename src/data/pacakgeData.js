@@ -1,4 +1,4 @@
-import Background1 from "../assets/mountains.jpg"
+
 import Background2 from "../assets/treesandhouse.jpg"
 
 export const packageData = {
