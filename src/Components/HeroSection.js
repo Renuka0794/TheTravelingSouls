@@ -6,7 +6,7 @@ import CubeAnimation from "react-awesome-slider/dist/custom-animations/cube-anim
 
 // scaleOutAnimation fallAnimation cubeAnimation openAnimation foldOutAnimation
 
-export default function HeroSection({withSlider, data,height='100vh'}) {
+export default function HeroSection({withSlider,data,height='100vh'}) {
 
     if (!withSlider) {
         return (

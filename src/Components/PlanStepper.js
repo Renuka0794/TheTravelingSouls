@@ -24,6 +24,7 @@ export default function PlanStepper({steps=[]}) {
   };
 
   return (
+    <div className='px-5'>
     <Box sx={{ maxWidth: 400 }}>
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((step, index) => (
@@ -44,6 +45,7 @@ export default function PlanStepper({steps=[]}) {
           </Step>
         ))}
       </Stepper>
-    </Box>
+      </Box>
+      </div>
   );
 }

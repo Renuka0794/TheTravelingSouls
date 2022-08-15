@@ -5,7 +5,7 @@ export default function Gallery() {
   const itemData = gallery();
   return (
   
-    <div className="section gallery text-center">
+    <div className="section gallery text-center" id="gallery">
       <Grid container spacing={2}>
         <Grid item xs={12} md={12} className="pb-10">
           <h4>Gallery</h4>

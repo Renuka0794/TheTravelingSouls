@@ -32,7 +32,7 @@ function App() {
         <div className="container m-0 p-0 max-w-[100%] app-container">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/package" element={<TripPackage />} />
+            <Route path="/package/:packageName" element={<TripPackage />} />
 
             {/* <Route path="/dashboard" element={<Dashboard />} /> */}
           </Routes>

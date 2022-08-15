@@ -5,44 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-const data = [
-  {
-    title: "Jibhi - Tirthan",
-    date: "17th June",
-    duration: "3Days/2Nights",
-    cost: "Starting 8299 INR",
-  },
-  {
-    title: "Manali - Baralacha La",
-    date: "17th June",
-    duration: "3Days/2Nights",
-    cost: "Starting 8599 INR",
-  },
-  {
-    title: "Spiti Full Circuit",
-    date: "8th July",
-    duration: "8Days/7Nights",
-    cost: "Starting 22599 INR",
-  },
-  {
-    title: "Jibhi - Tirthan",
-    date: "17th June",
-    duration: "3Days/2Nights",
-    cost: "Starting 8299 INR",
-  },
-  {
-    title: "Manali - Baralacha La",
-    date: "17th June",
-    duration: "3Days/2Nights",
-    cost: "Starting 8599 INR",
-  },
-  {
-    title: "Spiti Full Circuit",
-    date: "8th July",
-    duration: "8Days/7Nights",
-    cost: "Starting 22599 INR",
-  },
-];
+
 var settings = {
   dots: false,
   infinite: false,
@@ -75,21 +38,26 @@ var settings = {
 };
 
 
-export default function SliderSection({title,id}) {
+
+
+export default function SliderSection({ title, id, data = [],props = {} }) {
+  
   return (
     <div className="section slider" id={id}>
       <h6 className="slider-title">{title}</h6>
       <Slider {...settings}>
         {data.map((dataItem) => (
-          <Link to="/package">
-         
-          <Paper className="trip-data-card-inner" elevation={2}>
-            <div className="trip-data-card-inner-content">
-            <p className="text-xl title">{dataItem.title}</p>
-            <p className="text-xl price">{dataItem.price}</p>
-            <p className="text-xl duration">{dataItem.duration}</p>
-            <p className="text-xl date">{dataItem.cost}</p>
-            </div>
+          <Link to={`/package/${dataItem.key}`}>
+          <Paper className={`trip-data-card-inner`}elevation={2} style={{backgroundImage: `url(${dataItem.featuredImageLink})`}} >
+              <div className="trip-data-card-inner-content left-col">
+                <p className="text-xl title">{dataItem.title}</p>
+                <p className="text-xl duration">{dataItem.duration}</p>
+                <p className="text-xl price">{dataItem.cost}</p>
+              </div>
+              <div className="trip-data-card-inner-content right-col">
+                <h6 className="mb-2">Batch Dates</h6>
+                {dataItem.batchDates && dataItem.batchDates.map((batch,index)=><p className="text-xl date" key={index}>{batch}</p>)}
+              </div>
           </Paper>
           </Link>
         ))}

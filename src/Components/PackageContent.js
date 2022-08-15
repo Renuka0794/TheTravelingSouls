@@ -20,7 +20,9 @@ export default function PackageContent({ data }) {
 
   return (
     <div className="section package-content text-center mt-10 mb-40">
-      <Grid container spacing={2}>
+      {
+        data !== null && <>
+        <Grid container spacing={2}>
         <Grid item xs={12} md={6} className="pb-10">
             <Grid container spacing={{ xs: 1, md: 1 }} >
                 <Grid item md={4}>
@@ -58,7 +60,10 @@ export default function PackageContent({ data }) {
               <Tab label="More Info"  value={3} />
             </Tabs>
             <div className="py-10 pr-10">
-              {value === 0 && <p className="text-lg-left-sm-center text-xl">{data.about}</p>}
+                  {value === 0 &&
+                    <div className='px-5'>
+                      <p className="text-lg-left-sm-center text-xl">{data.about}</p>
+                    </div>}
             {value === 1 && <PlanStepper steps={data.itinerary} />}
             {value === 2 && <PlanPriceSection data={data.prices} />}
             {value === 3 && <PlanMoreInfo data={data.prices} />}
@@ -84,6 +89,10 @@ export default function PackageContent({ data }) {
         </div>
         </Grid>
       </Grid>
+        
+        </>
+      }
+      
     </div>
   );
 }

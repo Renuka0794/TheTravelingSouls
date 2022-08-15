@@ -6,6 +6,7 @@ import Background2  from "../assets/banner3.jpg"
 import SliderSection from "../Components/SliderSection";
 import Gallery from "../Components/Gallery";
 import Testimonial from "../Components/Testimonial";
+import { weekendTrips,lehExpedition } from "../data/pacakgeData";
 
 
 export default function Home() {
@@ -15,8 +16,8 @@ export default function Home() {
     <div className="w-full">
       <HeroSection withSlider={false} data={heroSectionData} />
       <HomeAboutSection />
-      <SliderSection title="Weekend Trips" id={"weekend-trips"} />
-      <SliderSection title="Expeditions" id={"expeditions"} />
+      <SliderSection title="Weekend Trips" id={"weekend-trips"} data={weekendTrips} />
+      <SliderSection title="Expeditions" id={"expeditions"} data={ lehExpedition} />
       <Gallery />
       <Testimonial />
     </div>

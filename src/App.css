@@ -70,7 +70,75 @@ p{
   background: black;
   
 }
+.nav-bar{
+  width: 100%;
+  background: #ffffff1a;
+  align-items: center;
+  padding: 5px 15%;
+}
+.nav-links{
+  font-size: 24px;
+}
+.logo-image{
+  width:70px;
+}
+.desktop-only{
+  display: flex;
+}
+.mobile-only{
+  display: none;
+}
+@media only screen and (max-width:767px) {
 
+  h1{
+    font-size: 52px;
+    font-family: 'Spline Sans Mono', monospace;
+    font-weight: 700;
+  
+  }
+  h2{
+    font-size: 48px;
+    font-family: 'Spline Sans Mono', monospace;
+    font-weight: 700;
+  }
+  h3{
+    font-size: 40px;
+    font-family: 'Spline Sans Mono', monospace;
+    font-weight: 600;
+  
+  }
+  h4{
+    font-size: 32px;
+    font-family: 'Spline Sans Mono', monospace;
+    font-weight: 500;
+  
+  }
+  h5{
+    font-size: 24px;
+    font-family: 'Spline Sans Mono', monospace;
+    font-weight: 500;
+  }
+  h6{
+    font-size: 26px;
+  }
+  p{
+    font-size: 12px;
+  }
+  .logo-image{
+    width:50px;
+  }
+  .desktop-only{
+    display: none;
+  }
+  .mobile-only{
+    display: flex;
+  }
+  .header-container{
+    position: fixed;
+    background: #9490904d;
+  }
+
+}
 
 @keyframes App-logo-spin {
   from {

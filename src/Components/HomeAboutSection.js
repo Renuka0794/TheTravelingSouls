@@ -9,7 +9,7 @@ import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 
 export default function HomeAboutSection() {
   return (
-    <Grid className="section about" container spacing={2}>
+    <Grid className="section about" container spacing={2} id="about">
       <Grid item xs={12} md={12}>
         <h4 className="">Explore With Us</h4>
       </Grid>
