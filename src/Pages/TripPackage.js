@@ -14,7 +14,7 @@ export default function TripPackage() {
       setCurrentPackageData(packages[packageName]);
       setHeroSectionData([
         {
-          imglink: packages[packageName].featuredImageLink,
+          imglink: `.${packages[packageName].featuredImageLink}`,
           title: packages[packageName].title,
           subtitle: packages[packageName].subtitle,
         },
