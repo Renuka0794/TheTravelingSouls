@@ -93,6 +93,16 @@ var settings = {
         arrows: false,
       },
     },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        arrows: false,
+      },
+    },
   ],
 };
 

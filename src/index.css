@@ -167,7 +167,7 @@ color: #fff;
   background-color: #fff;
   overflow-y: scroll;
   border-radius: 10px;
-  height: 250px;
+  min-height: 250px;
 }
 .testimonial-card .card-header{
   opacity: .75;
