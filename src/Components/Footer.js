@@ -13,9 +13,9 @@ export default function Footer() {
           Contact:{" "}
           <a
             className="text-slate-800"
-            href="whatsapp://send?text=Hello World!&phone=+919871986330"
+            href="whatsapp://send?text=Hello. I got your contact from your website.!&phone=+919910859297"
           >
-            9871986330
+            +91-9910859297
           </a>
         </p>
       </Grid>
