@@ -28,6 +28,10 @@ z-index: 100;
 .black-icon{
   color:#000;
 }
+.white-icon{
+fill: #fff ;
+color: #fff;
+}
 .icon-xs{
   height:20px !important;
   width:20px !important;
@@ -155,6 +159,28 @@ z-index: 100;
 }
 .slick-slide {
   padding:0 5px;
+}
+.testimonial-card{
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  overflow-y: scroll;
+  border-radius: 10px;
+  height: 250px;
+}
+.testimonial-card .card-header{
+  opacity: .75;
+  font-weight: 900;
+}
+.slick-dots li {
+display: none;
+  }
+.slick-dots li button:before{
+color: #fff !important;
+}
+.slick-dots li.slick-active button:before{
+  color: #fff !important;
 }
 /*  Slider Section end */
 
